@@ -1,4 +1,16 @@
-c
+def numUniqueEmails(emails):
+    newEmails = set()
+    for i in emails:
+        subEmail = ""
+        email = i.split('@')
+        subE = email[0].split('+')
+        subNoPoint = subE[0].split('.')
+        for j in subNoPoint:
+            subEmail = subEmail + j
+        newEmail = subEmail + "@" + email[1]
+        newEmails.add(newEmail)
+    print(len(newEmails))
+    return len(newEmails)
 
 
 test = ["fg.r.u.uzj+o.pw@kziczvh.com", "r.cyo.g+d.h+b.ja@tgsg.z.com", "test.email+alex@leetcode.com",
