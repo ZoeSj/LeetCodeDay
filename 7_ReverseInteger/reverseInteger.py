@@ -40,7 +40,13 @@ def reverseInteger(num):
         return result
 
 
-print(reverseInteger(num))
+def reverse(x):
+    s = cmp(x, 0)
+    r = int(`s * x`[::-1])
+    return s * r * (r < 2 ** 31)
+
+
+print(reverse(num))
 
 # ls = ['0', '5', '4', '3', '2', '1']
 #
